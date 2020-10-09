@@ -7,12 +7,14 @@ public class Alumno  implements Serializable{
 	String nombre;
 	String dirección;
 	int edad;
+	boolean matricula;
 	
 	public Alumno(String nombre, String dirección, int edad) {
 		super();
 		this.nombre = nombre;
 		this.dirección = dirección;
 		this.edad = edad;
+		matricula = true;
 	}
 
 	public String getNombre() {
@@ -37,6 +39,14 @@ public class Alumno  implements Serializable{
 
 	public void setEdad(int edad) {
 		this.edad = edad;
+	}
+
+	public boolean isMatricula() {
+		return matricula;
+	}
+
+	public void setMatricula(boolean matricula) {
+		this.matricula = matricula;
 	}
 	
 	
