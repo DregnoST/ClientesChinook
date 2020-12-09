@@ -1,7 +1,8 @@
 package utiles;
 
+import java.util.HashSet;
 import java.util.List;
-
+import java.util.Set;
 import org.hibernate.Session;
 import modelos.Equipos;
 import modelos.Jugadores;
@@ -30,6 +31,14 @@ public class ClienteHibernate {
 		
 		for (Equipos equipo : result) {
 			System.out.println("Equipo: " + equipo.toString());
+			System.out.println("*********PLANTILLA**********");
+			//Set<Jugadores> hset = equipo.getJugadoresEquipo();
+			
+			for (Jugadores jug : equipo.getJugadores()) {
+				System.out.println(jug.getNombre());
+			}
+			System.out.println();
+			
 		}
 		
 		return result;

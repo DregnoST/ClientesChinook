@@ -7,12 +7,9 @@
     <property name="conferencia" column="Conferencia"/>
     <property name="division" column="Division"/>
     
-    <list name="Jugadores" cascade="all" inverse="false">
-    	<key>
-    		<column name="nombre_equipo"/>
-    	</key>
-    	<index column="nombre_equipo"/>
+    <set name="Jugadores" cascade="all" inverse="true" lazy="false">
+    	<key column="nombre_equipo" not-null="true"/>
     	<one-to-many class="modelos.Jugadores"/>
-    </list>
+    </set>
   </class>
 </hibernate-mapping>

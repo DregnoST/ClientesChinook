@@ -10,14 +10,14 @@ public class Jugadores implements Serializable {
 	private String altura;
 	private int peso;
 	private String posicion;
-	private String nombre_equipo;
+	private Equipos equipo;
 	
 	
 	public Jugadores() {
 		
 	}
 	
-	public Jugadores(int codigo, String nombre, String procedencia, String altura, int peso, String posicion, String nombre_equipo) {
+	public Jugadores(int codigo, String nombre, String procedencia, String altura, int peso, String posicion, Equipos equipo) {
 		
 		this.codigo = codigo;
 		this.nombre = nombre;
@@ -25,7 +25,7 @@ public class Jugadores implements Serializable {
 		this.altura = altura;
 		this.peso = peso;
 		this.posicion = posicion;
-		this.nombre_equipo = nombre_equipo;
+		this.equipo = equipo;
 		
 	}
 	
@@ -79,20 +79,20 @@ public class Jugadores implements Serializable {
 		this.posicion = posicion;
 	}
 
-	public String getNombre_equipo() {
-		return nombre_equipo;
+	public Equipos getEquipo() {
+		return equipo;
 	}
 
-	public void setNombre_equipo(String nombre_equipo) {
-		this.nombre_equipo = nombre_equipo;
+	public void setEquipo(Equipos equipo) {
+		this.equipo = equipo;
 	}
 	
 	// fin Getters y Setters
-	
+
 	@Override
 	public String toString() {
 		
-		return "Codigo: " + codigo + " Nombre: " + nombre + " Procedencia: " + procedencia + " Altura: " + altura + " Peso: " + peso + " Posicion: " + posicion + " Nombre_equipo: " + nombre_equipo; 
+		return "Codigo: " + codigo + " Nombre: " + nombre + " Procedencia: " + procedencia + " Altura: " + altura + " Peso: " + peso + " Posicion: " + posicion; 
 	}
 	
 }

@@ -2,6 +2,7 @@ package modelos;
 
 import java.io.Serializable;
 import java.util.List;
+import java.util.Set;
 
 public class Equipos implements Serializable {
 
@@ -9,7 +10,7 @@ public class Equipos implements Serializable {
 	private String ciudad;
 	private String conferencia;
 	private String division;
-	private List<Jugadores> jugadoresEquipo;
+	private Set<Jugadores> jugadores;
 	
 	public Equipos() {
 		
@@ -19,8 +20,7 @@ public class Equipos implements Serializable {
 		this.nombre = nombre;
 		this.ciudad = ciudad;
 		this.conferencia = conferencia;
-		this.division = division;
-		
+		this.division = division;		
 	}
 	
 	// Getters y Setters
@@ -57,12 +57,12 @@ public class Equipos implements Serializable {
 		this.division = division;
 	}
 	
-	public List<Jugadores> getJugadoresEquipo() {
-		return jugadoresEquipo;
+	public Set<Jugadores> getJugadores() {
+		return jugadores;
 	}
 
-	public void setJugadoresEquipo(List<Jugadores> jugadoresEquipo) {
-		this.jugadoresEquipo = jugadoresEquipo;
+	public void setJugadores(Set<Jugadores> jugadores) {
+		this.jugadores = jugadores;
 	}
 	
 	

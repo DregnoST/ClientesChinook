@@ -7,10 +7,10 @@
     <property name="procedencia" column="Procedencia"/>
     <property name="altura" column="Altura"/>
     <property name="peso" column="Peso"/>
-    <property name="nombre_equipo" column="Nombre_Equipo"/>
+
     
-    <many-to-one name="Equipo">
-    	<column name="nombre_equipo"/>
+    <many-to-one name="equipo" class="modelos.Equipos">
+    	<column name="nombre_equipo" not-null="true"/>
     </many-to-one>
   </class>
 </hibernate-mapping>
